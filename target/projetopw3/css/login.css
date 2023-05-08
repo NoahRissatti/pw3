@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  h2 {
+    align-self: flex-start;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 120px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  label {
+    align-self: flex-start;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    align-self: flex-start;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .botoes{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+
+  .botao--enviar {
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  .botao--enviar:hover {
+    background-color: #3e8e41;
+  }
+
+  .botao--cadastro{
+    text-decoration: none;
+    background-color: #d6a15a;
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+
+  .botao--cadastro:hover {
+    background-color: #b68832;
+  }
+
+  .form--cadastro{
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
