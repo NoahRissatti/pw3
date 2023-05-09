@@ -37,6 +37,7 @@ public class Login extends HttpServlet{
 
             session.setAttribute("auth", reqUser.getUsuario());
             session.setAttribute("message", "Logado com sucesso!");
+            context.setAttribute("usuarioAutenticado", reqUser.getUsuario());
             resp.sendRedirect("/projetopw3/menu.jsp");
 
         } else {

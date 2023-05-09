@@ -27,6 +27,12 @@ public class User {
         this.email = email;
     }
 
+    @Override
+    public String toString() {
+        return "User [usuario=" + usuario + ", email=" + email + ", password=" + password + ", nomeCompleto="
+                + nomeCompleto + ", cpf=" + cpf + "]";
+    }
+
     public String getPassword() {
         return password;
     }

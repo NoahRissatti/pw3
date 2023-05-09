@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+
+    <%
+    String usuario = (String)session.getAttribute("usuario"); 
+    String senha = (String)session.getAttribute("senha");
+    String email = (String)session.getAttribute("email");
+    String cpf = (String)session.getAttribute("cpf");
+    String nome = (String)session.getAttribute("nome");        
+    %>
+
     <header>
         <nav>
             <ul>
@@ -33,13 +42,13 @@
         <form action="editarservlet" method="get" class="form--cadastro">
             <h2>Edite seus dados: </h2>
             <label for="usuario">Usuário:</label>
-            <input type="text" id="usuario" name="usuario"><br><br>
+            <input type="text" id="usuario" name="usuario" value="<%=usuario%>"><br><br>
             <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha"><br><br>
+            <input type="password" id="senha" name="senha" value="<%=senha%>"><br><br>
             <label for="nome">Nome completo:</label>
-            <input type="text" id="nome" name="nome" minlength="4"><br><br>
+            <input type="text" id="nome" name="nome" minlength="4" value="<%=nome%>"><br><br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" minlength="4"><br><br>
+            <input type="email" id="email" name="email" minlength="4" value="<%=email%>"><br><br>
             <input type="submit" value="Enviar" class="botao--enviar">
         </form>
     </div>
