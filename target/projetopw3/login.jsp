@@ -10,15 +10,15 @@
 </head>
 
 <body>
-    <form action="" method="post">
+    <form action="loginservlet" method="post">
         <h2>Entre com seu usuário e senha:</h2>
         <label for="usuario">Usuário:</label>
-        <input type="email" id="usuario" name="usuario"><br><br>
+        <input type="text" id="usuario" name="usuario"><br><br>
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha"><br><br>
         <div class="botoes">
-            <a href="/html/home.html" class="botao--enviar">Enviar</a>
-            <a class="botao--cadastro" href="/html/cadastro.html">Criar cadastro</a>
+            <input type="submit" value="Enviar" class="botao--enviar">
+            <a class="botao--cadastro" href="http://localhost:8080/projetopw3/cadastro.jsp">Criar cadastro</a>
         </div>
     </form>
 </body>

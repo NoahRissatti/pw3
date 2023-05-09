@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form action="cadastro" method="post" class="form--cadastro">
+    <form action="cadastroservlet" method="post" class="form--cadastro">
         <h2>Crie sua conta: </h2>
         <label for="usuario">Usuário:</label>
         <input type="text" id="usuario" name="usuario"><br><br>
