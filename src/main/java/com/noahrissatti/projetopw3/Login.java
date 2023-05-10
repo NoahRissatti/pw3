@@ -37,7 +37,24 @@ public class Login extends HttpServlet{
 
             session.setAttribute("auth", reqUser.getUsuario());
             session.setAttribute("message", "Logado com sucesso!");
-            context.setAttribute("usuarioAutenticado", reqUser.getUsuario());
+            
+            User respUser = users.get(reqUser.getUsuario());
+
+            String usuario = respUser.getUsuario();
+            session.setAttribute("usuario", usuario);
+
+            String cpf = respUser.getCpf();
+            session.setAttribute("cpf", cpf);
+        
+            String nome = respUser.getNomeCompleto();
+            session.setAttribute("nome", nome);
+
+            String email = respUser.getEmail();
+            session.setAttribute("email", email);
+
+            String senha = respUser.getPassword();
+            session.setAttribute("senha", senha);
+
             resp.sendRedirect("/projetopw3/menu.jsp");
 
         } else {

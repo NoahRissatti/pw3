@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,6 +9,15 @@
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+
+    <%
+    String usuario = (String)session.getAttribute("usuario"); 
+    String senha = (String)session.getAttribute("senha");
+    String email = (String)session.getAttribute("email");
+    String cpf = (String)session.getAttribute("cpf");
+    String nome = (String)session.getAttribute("nome");        
+    %>
+
     <header>
         <nav>
             <ul>
@@ -29,8 +39,14 @@
             </ul>
         </nav>
     </header>
-    <div>
+    <div class="minha--conta">
         <h2>Minha conta</h2>
+        <h3>Nome Completo</h3>
+        <p><%=nome%></p>
+        <h3>Usuário</h3>
+        <p><%=usuario%></p>
+        <h3>CPF</h3>
+        <p><%=cpf%></p>
     </div>
 </body>
 </html>

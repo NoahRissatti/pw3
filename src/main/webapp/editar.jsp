@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,7 +22,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/html/home.html">
+                    <a href="http://localhost:8080/projetopw3/menu.jsp">
                         Minha conta
                     </a>
                 </li>
@@ -31,7 +32,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/html/login.html">
+                    <a href="http://localhost:8080/projetopw3/login.jsp">
                         Sair
                     </a>
                 </li>
@@ -39,7 +40,7 @@
         </nav>
     </header>
     <div>
-        <form action="editarservlet" method="get" class="form--cadastro">
+        <form action="editarservlet" method="post" class="form--cadastro">
             <h2>Edite seus dados: </h2>
             <label for="usuario">Usuário:</label>
             <input type="text" id="usuario" name="usuario" value="<%=usuario%>"><br><br>
@@ -50,6 +51,9 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" minlength="4" value="<%=email%>"><br><br>
             <input type="submit" value="Enviar" class="botao--enviar">
+        </form>
+        <form action="excluirservlet" method="post">
+            <input type="submit" value="Excluir conta" class="botao--excluir">
         </form>
     </div>
 </body>

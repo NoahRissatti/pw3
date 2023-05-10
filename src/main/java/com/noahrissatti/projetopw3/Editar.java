@@ -14,26 +14,32 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/editarservlet")
 public class Editar extends HttpServlet{
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
         ServletContext context = getServletContext();
+        Map<String, User> users;
+        User reqUser = new User();
 
-        Map<String, User> users = (Map<String, User>) context.getAttribute("users");
-        User respUser = users.get((String)context.getAttribute("usuarioAutenticado"));
+        reqUser.setUsuario(req.getParameter("usuario"));
+        reqUser.setCpf(req.getParameter("cpf"));
+        reqUser.setNomeCompleto(req.getParameter("nome"));
+        reqUser.setEmail(req.getParameter("email"));
+        reqUser.setPassword(req.getParameter("senha"));
 
-        String usuario = respUser.getUsuario();
+        users = ((Map<String, User>) context.getAttribute("users"));
+
+        users.put(reqUser.getUsuario(), reqUser);
+
+        String usuario = reqUser.getUsuario();
         session.setAttribute("usuario", usuario);
 
-        String cpf = respUser.getCpf();
+        String cpf = reqUser.getCpf();
         session.setAttribute("cpf", cpf);
         
-        String nome = respUser.getNomeCompleto();
+        String nome = reqUser.getNomeCompleto();
         session.setAttribute("nome", nome);
 
-        String email = respUser.getEmail();
-        session.setAttribute("email", email);
+        resp.sendRedirect("/projetopw3/menu.jsp");
 
-        String senha = respUser.getPassword();
-        session.setAttribute("senha", senha);
     }
 }

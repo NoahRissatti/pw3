@@ -23,7 +23,7 @@ public class Cadastro extends HttpServlet{
 
         reqUser.setUsuario(req.getParameter("usuario"));
         reqUser.setCpf(req.getParameter("cpf"));
-        reqUser.setNomeCompleto(req.getParameter("name"));
+        reqUser.setNomeCompleto(req.getParameter("nome"));
         reqUser.setEmail(req.getParameter("email"));
         reqUser.setPassword(req.getParameter("senha"));
 
